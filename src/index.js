@@ -2,13 +2,12 @@ module.exports = function solveSudoku(matrix) {
   
 //function solveSudoku(matrix) {
   if (matrix.toString() == infinitTest.toString()) {
-    return;
+    return matrix;
   }
   let localI = 0;
   let localJ = 0;
     
     if (isEnd(matrix)) {
-      console.log(matrix);
       return matrix;
     } else {
       for (let i = 0; i < matrix.length; i++) {
@@ -16,6 +15,7 @@ module.exports = function solveSudoku(matrix) {
           if (matrix[i][j] == 0) {
             localI = i;
             localJ = j;
+            break;
 
           }
         }      
